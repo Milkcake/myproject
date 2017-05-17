@@ -7,9 +7,9 @@ import {Novels} from './novels';
 })
 export class ContentComponent implements OnInit {
 
-  cardHeader:string = 'นิยายทั้งหมด';
+  cardHeader:string = 'นิยายตอนใหม่ล่าสุด';
 
-  cardTitle:any = {title: 'นิยายล่าสุด' };
+
   
   novels:Novels[];
   selectNovel:Novels;

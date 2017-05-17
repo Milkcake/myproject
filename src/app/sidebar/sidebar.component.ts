@@ -11,10 +11,12 @@ import {
 export class SidebarComponent implements OnInit {
   imgUrl: string;
   imgWidth: number;
+  imgBorder:string;
 
   constructor() {
     this.imgUrl = 'http://placehold.it/50x50';
     this.imgWidth = 100;
+    this.imgBorder ='2px solid red';
   }
 
   ngOnInit() {}
@@ -22,8 +24,12 @@ export class SidebarComponent implements OnInit {
   changeImg() {
     if (this.imgWidth != 200) {
       this.imgWidth = 200;
+      this.imgBorder ='5px solid green';
+      
     } else {
       this.imgWidth = 100;
+      this.imgBorder ='2px solid red';
+      
     }
 
   }
