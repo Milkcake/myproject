@@ -1,18 +1,11 @@
 <div class="container-fluid">
-  
+
   <app-header></app-header>
-  
+
   <div class="row pt-2">
 
-    <div class="col-md-7 offset-md-1">
-      <app-content></app-content>
-      
-    </div>
-
-    <div class="col-md-3">
-      <app-sidebar></app-sidebar>
-      <hr>
-      <app-left></app-left>
+    <div class="col-md-12 offset-md-1">
+      <router-outlet></router-outlet>
     </div>
 
   </div>
