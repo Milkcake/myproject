@@ -27,7 +27,11 @@ const routes: Routes = [
     path: 'glossary',
     component: GlossaryComponent
   },
-  
+  { 
+    path: '**', 
+    redirectTo: '/', 
+    pathMatch: 'full' 
+  } 
 ];
 
 @NgModule({
