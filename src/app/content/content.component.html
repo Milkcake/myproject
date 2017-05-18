@@ -10,14 +10,14 @@
           <tr>
             <th>รหัส</th>
             <th>ชื่อนิยาย</th>
-            <th>รายละเอียด</th>
+            <th>ตอนที่</th>
           </tr>
         </thead>
         <tbody>
           <tr *ngFor="let novel of novels" (click)="showNovel(novel)">
             <td scope="row">{{novel.id}}</td>
             <td>{{novel.title}}</td>
-            <td>{{novel.detail}}</td>
+            <td>{{novel.chapter}}</td>
           </tr>
         </tbody>
       </table>

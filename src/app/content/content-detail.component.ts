@@ -1,5 +1,5 @@
 import { Component, OnInit ,  Input  } from '@angular/core';
-import {Novels} from './novels';
+import {Novels} from './novel-update';
 
 @Component({
   selector: 'app-content-detail',

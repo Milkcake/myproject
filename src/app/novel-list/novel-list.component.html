@@ -1,3 +1,43 @@
-<p>
-  novel-list works!
-</p>
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-md-11">
+      <div class="card">
+        <div class="card-header">
+          <h4>{{cardHeader}}</h4>
+        </div>
+
+        <div class="card-block">
+          <div *ngIf="novels.length">
+            <table class="table table-hover">
+              <thead>
+                <tr>
+                  <th>รหัส</th>
+                  <th>ชื่อนิยาย</th>
+                  <th>รายละเอียด</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr *ngFor="let novel of novels" (click)="showNovel(novel)">
+                  <td scope="row">{{novel.id}}</td>
+                  <td>{{novel.title}}</td>
+                  <td>{{novel.detail}}</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <div *ngIf="novels.length==0">
+            <h6>ไม่มีนิยายตอนใหม่</h6>
+          </div>
+          <div *ngIf="selectNovel" class="alert alert-success " role="alert">
+            <strong>{{selectNovel?.title}} ,{{selectNovel?.id}}</strong>
+          </div>
+
+        </div>
+
+      </div>
+    </div>
+
+
+  </div>
+</div>

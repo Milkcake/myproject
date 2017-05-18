@@ -4,6 +4,7 @@ import { AboutComponent } from './about/about.component';
 import { HomeComponent } from './home/home.component';
 import { GlossaryComponent } from './glossary/glossary.component';
 import { NovelListComponent } from './novel-list/novel-list.component';
+import { NovelDetailComponent } from './novel-list/novel-detail.component';
 
 const routes: Routes = [
   {
@@ -15,18 +16,18 @@ const routes: Routes = [
     component: AboutComponent
   },
   {
-    path: 'novel-list',
+    path: 'novel',
     component: NovelListComponent
+  },
+  {
+    path: 'novel/:id',
+    component: NovelDetailComponent
   },
   {
     path: 'glossary',
     component: GlossaryComponent
   },
-  {
-    path: '**',
-    redirectTo: '/',
-    pathMatch: 'full'
-  }
+  
 ];
 
 @NgModule({

@@ -13,6 +13,7 @@ import { AboutComponent } from './about/about.component';
 import { GlossaryComponent } from './glossary/glossary.component';
 import { NovelListComponent } from './novel-list/novel-list.component';
 import { AppRoutingModule } from './app-routing.module';
+import { NovelDetailComponent } from './novel-list/novel-detail.component';
 
 @NgModule({
   declarations: [
@@ -24,7 +25,8 @@ import { AppRoutingModule } from './app-routing.module';
     HomeComponent,
     AboutComponent,
     GlossaryComponent,
-    NovelListComponent
+    NovelListComponent,
+    NovelDetailComponent
   ],
   imports: [
     BrowserModule,
