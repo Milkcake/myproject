@@ -1,5 +1,5 @@
 import { Component, OnInit ,Input} from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Params } from '@angular/router';
 
 import {Novels} from './novels';
 
@@ -14,7 +14,10 @@ export class NovelDetailComponent implements OnInit {
   constructor(private route:ActivatedRoute) { }
 
   ngOnInit() {
-    this.id = this.route.snapshot.params['id'];
+    //this.id = this.route.snapshot.params['id'];
+    this.route.params.subscribe((params: Params)=>{
+        this.id = params['id'];
+    });
   }
 
 }
